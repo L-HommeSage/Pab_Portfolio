@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+nav{
+   
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+
+}
+ul{
+    margin: 0;
+    Padding: 0;
+    display: flex;
+    
+
+}
+ul li{
+    list-style: none;
+    margin: 0 25px;
+    transition: 0.5%;
+    display: inline-block;
+    
+}
+ul li a {
+    display: block;
+    position:  relative;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.5s;
+   
+
+
+}
+ul:hover li a {
+    transform: scale(1.5);
+    opacity: .2;
+    filter: blur(5px);
+    
+
+}
+ul li a:hover {
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+
+}
+ul li a:before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg,#12435a,#060c21);
+    transition:  transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+    border-radius: 10px;
+
+
+}
+ul li a:hover:before
+{
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*============================================================================*/
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background-image: url("imgs/ballon.JPG");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: none;
+	font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    padding-top: 100px; 
+    position: relative;
+	display: flex;
+    justify-content: space-around;
+	padding-left: 10px;
+    padding-right: 10px;
+    grid-gap: 0 40px;
+    
+}
+.container .box
+{
+    position: relative;
+    height: 420px;
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+	
+    
+    
+}
+.container .box:nth-child(1)
+{
+    background-image: url("imgs/skate.jpg");
+}
+.container .box:nth-child(2)
+{
+    background-image: url("imgs/life.png");
+}
+.container .box:nth-child(3)
+{
+    background-image: url("imgs/Flappy.png");
+    
+}
+.container .box:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+    z-index: -1;
+   
+    
+}
+.container .box:nth-child(1):before
+{
+	background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container .box:nth-child(2):before
+{
+	background: linear-gradient(315deg,#89ff00,#00bcd4)	
+}
+.container .box:nth-child(3):before
+{
+	background: linear-gradient(315deg,#e91e63,#5d02ff)
+}
+
+.container .box:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+    height: 100%;
+	pointer-events: none;
+}
+.content
+{
+	position: relative;
+	padding: 20px;
+	transform: translateY(40px);
+}
+.box .content h2
+{
+	position: absolute;
+	top: -60px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 9em;
+	color: rgba(6, 12, 33,.1);
+	transition: 0.5s;
+}
+.box:hover .content h2
+{
+    top: -140px;
+    color: rgba(6, 12, 33,.7);
+    
+}
+.box .content h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	color: rgb(6, 12, 33);
+}
+
+.box .content p
+{
+    margin: 0;
+	padding: 0;
+    position: relative;
+    font-size: 16px;
+	margin: 20px 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px solid #fff;
+	display: inline-block;
+    color: #fff;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(315deg,#12435a,#060c21);
+}
+
+.box:hover .content p
+{
+	transform: translateY(0);
+	opacity: 1;
+    visibility: visible;
+    
+    
+}
+footer{
+    margin-top:180px; 
+    background: black;
+    padding:10px;
+    text-align: center;
+    color: white;
+    height: 100px;
+}
+
+
